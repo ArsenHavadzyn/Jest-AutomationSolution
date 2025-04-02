@@ -1,6 +1,10 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test unit": "jest tests/unit",
+    "test api": "jest tests/api",
+    "test ui": "jest tests/ui",
+    "test e2e": "jest tests/e2e"
   },
   "type": "module",
   "devDependencies": {
