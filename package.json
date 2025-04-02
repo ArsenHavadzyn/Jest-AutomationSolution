@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "test": "jest",
-    "test unit": "jest tests/unit",
-    "test api": "jest tests/api",
-    "test ui": "jest tests/ui",
-    "test e2e": "jest tests/e2e"
+    "test": "jest && npx cypress run",
+    "test:unit": "jest tests/unit",
+    "test:api": "jest tests/api",
+    "test:ui": "npx cypress run --spec 'tests/ui/**/*.cy.js'",
+    "test:e2e": "npx cypress run --spec 'tests/e2e/**/*.cy.js'",
+    "test:all": "jest && npx cypress run --spec 'tests/ui/**/*.cy.js' && npx cypress run --spec 'tests/e2e/**/*.cy.js'"
   },
   "type": "module",
   "devDependencies": {
